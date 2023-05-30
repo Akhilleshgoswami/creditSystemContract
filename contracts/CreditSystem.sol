@@ -42,10 +42,8 @@ contract CreditSystem is Ownable  {
         return ICERC20(creditToken).balanceOf(account);
     }
 
-function mint(address to_, uint256 amount_) external onlyOwner {
-       ICERC20(creditToken).mint(to_, amount_);
+function mint(address to_) external onlyOwner {
+       ICERC20(creditToken).mint(to_, 1000*1e18);
     }
 
 }
-// 0xd6900Eb414A51Cec95b42D09f84Cf8799C3D5A26
-// 0xf5B4F8d58Cc3Af2e36B016b49ec45A328A5618c4 system
